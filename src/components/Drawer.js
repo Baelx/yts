@@ -17,6 +17,7 @@ import { makeStyles, useTheme } from '@material-ui/core/styles';
 import SubscriptionsIcon from '@material-ui/icons/Subscriptions';
 import SearchIcon from '@material-ui/icons/Search';
 
+import FetchYTData from './FetchYTData';
 
 const drawerWidth = 300;
 
@@ -36,7 +37,7 @@ const useStyles = makeStyles(theme => ({
       width: `calc(100% - ${drawerWidth}px)`,
     },
     backgroundColor: 'white',
-    color: 'red'
+    color: 'black'
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -54,7 +55,7 @@ const useStyles = makeStyles(theme => ({
     padding: theme.spacing(3),
   },
   iconColor: {
-    fill: 'red'
+    color: 'red'
   }
 }));
 
@@ -75,7 +76,7 @@ export default function ResponsiveDrawer(props) {
       <List>
         {['Connect Account', 'Search Likes'].map((text, index) => (
           <ListItem button key={text}>
-            <ListItemIcon className={theme.iconColor}>{index % 2 === 0 ? <SubscriptionsIcon /> : <SearchIcon />}</ListItemIcon>
+            <ListItemIcon className={classes.iconColor}>{index % 2 === 0 ? <SubscriptionsIcon /> : <SearchIcon />}</ListItemIcon>
             <ListItemText primary={text} />
           </ListItem>
         ))}
@@ -98,7 +99,7 @@ export default function ResponsiveDrawer(props) {
               <MenuIcon />
             </IconButton>
             <Typography variant="h6" noWrap>
-              Responsive drawer
+              Youtube Liked Video Search
             </Typography>
           </Toolbar>
         </AppBar>
@@ -135,10 +136,11 @@ export default function ResponsiveDrawer(props) {
             </nav>
             <main className={classes.content}>
               <div className={classes.toolbar} />
-              <Typography paragraph>
-                Ever wanted to find a video you liked once on Youtube only to end up scrolling through lazy-loaded results while CTRL+Fing?
+              <Typography paragraph textAlign="center">
+                <Typography>Ever wanted to find a video you liked once on Youtube only to end up scrolling through lazy-loaded results while CTRL+Fing?</Typography>
 
-                There's got to be a better way!
+                <Typography>There's got to be a better way!</Typography>
+                <FetchYTData />
               </Typography>
             </main>
           </div>

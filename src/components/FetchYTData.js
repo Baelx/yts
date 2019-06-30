@@ -1,5 +1,7 @@
 import React from 'react';
 
+//Example Fetch req to illustrate rendering API data
+
 export default class FetchYTData extends React.Component {
 
   constructor(props){

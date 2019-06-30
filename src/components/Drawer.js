@@ -136,12 +136,13 @@ export default function ResponsiveDrawer(props) {
             </nav>
             <main className={classes.content}>
               <div className={classes.toolbar} />
-              <Typography paragraph textAlign="center">
-                <Typography>Ever wanted to find a video you liked once on Youtube only to end up scrolling through lazy-loaded results while CTRL+Fing?</Typography>
+              <Typography paragraph>
+
+              </Typography>
+                              <Typography>Ever wanted to find a video you liked once on Youtube only to end up scrolling through lazy-loaded results while CTRL+Fing?</Typography>
 
                 <Typography>There's got to be a better way!</Typography>
                 <FetchYTData />
-              </Typography>
             </main>
           </div>
         );
